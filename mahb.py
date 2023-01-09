@@ -5,6 +5,9 @@ from datetime import datetime
 from PIL import Image
 
 
+    
+
+
 option = st.selectbox(    'Select an airport ',     ('Klia', 'Rgia', 'etc'))
 st.write('You selected:', option)
 st.write("<h2 style='color:black;'> Heat Map of workers at airport </h2>",
@@ -32,6 +35,14 @@ with col3:
     st.write("")
 
 st.warning('High Traffic at Check-In Counter', icon="⚠️")
+
+sideb = st.sidebar
+check1 = sideb.button("Check for traffic")
+textbyuser = st.text_input("Enter Date & Time")
+if check1:
+    st.info("Lists flights that caused traffic based on wait time")
+
+
 
 st.write("<h2 style='color:black;'> Real & Estimated wait times </h2>",
              unsafe_allow_html=True)
