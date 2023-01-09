@@ -31,7 +31,7 @@ with col2:
 with col3:
     st.write("")
 
-
+st.warning('High Traffic at Check-In Counter', icon="⚠️")
 
 st.write("<h2 style='color:black;'> Real & Estimated wait times </h2>",
              unsafe_allow_html=True)
